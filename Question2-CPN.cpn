@@ -1,0 +1,9 @@
+fun swap(l,pos,new) =
+if l = []
+then []
+else
+if pos = 1
+then [new]^^swap(List.tl l,pos - 1, new)
+else [List.hd l]^^swap(List.tl l,pos - 1, new);
+
+swap([1,2,3,4],2,7);
