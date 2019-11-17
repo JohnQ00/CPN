@@ -1,1 +1,9 @@
+fun check(l,checking) =
+if l = []
+then 666
+else
+if checking = 1
+then List.hd l
+else check(List.tl l, checking - 1);
 
+check([1,2,3,4,5,23,8],5); 
