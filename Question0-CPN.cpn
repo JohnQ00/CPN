@@ -1,0 +1,7 @@
+fun reverse(v) =
+if v = []
+then []
+else
+reverse(List.tl v)^^[List.hd v];
+
+reverse([1,2,3]);
