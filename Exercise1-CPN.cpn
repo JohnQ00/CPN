@@ -1,1 +1,33 @@
+(*Atividade pedida em aula*)
 
+fun reverse(v) =
+if v = []
+then []
+else
+reverse(List.tl v)^^[List.hd v];
+
+reverse([1,2,3]);
+
+(*Atividade extra-classe*)
+
+fun check(l,checking) =
+if l = []
+then 666
+else
+if checking = 1
+then List.hd l
+else check(List.tl l, checking - 1);
+
+check([1,2,3,4,5,23,8],5);
+
+(*Atividade extra-classe*)
+
+fun swap(l,pos,new) =
+if l = []
+then []
+else
+if pos = 1
+then [new]^^swap(List.tl l,pos - 1, new)
+else [List.hd l]^^swap(List.tl l,pos - 1, new);
+
+swap([1,2,3,4],2,7);
