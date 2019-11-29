@@ -1,0 +1,7 @@
+fun union(lista, listb) = 
+if lista = []
+then []
+else
+[List.hd lista]^^[List.hd listb]^^union(List.tl lista,List.tl listb);
+
+union([1,2,3],[4,5,6]);
