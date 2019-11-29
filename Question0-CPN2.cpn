@@ -1,0 +1,10 @@
+fun sum(lista,listb) =
+if lista = []
+then []
+else
+if listb = []
+then []
+else
+[List.hd lista + List.hd listb]^^sum(List.tl lista, List.tl listb);
+
+sum([1,2,3,5],[5,4,4,1]);
